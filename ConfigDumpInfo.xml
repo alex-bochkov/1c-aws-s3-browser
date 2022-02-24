@@ -41,7 +41,7 @@
 			<Metadata name="DataProcessor.AwsS3Browser.Attribute.Bucket" id="f2e98bab-7609-465b-be88-f5c297e37c5f"/>
 		</Metadata>
 		<Metadata name="DataProcessor.AwsS3Browser.Form.Form" id="d22eb16d-b384-4dc1-b649-d185990be62f" configVersion="419608e84a6482f6fc54aaeebdeb36426ad62136"/>
-		<Metadata name="DataProcessor.AwsS3Browser.Form.Form.Form" id="d22eb16d-b384-4dc1-b649-d185990be62f.0" configVersion="bd0f730b94d45d928b617b073e779debf88a8eb4"/>
+		<Metadata name="DataProcessor.AwsS3Browser.Form.Form.Form" id="d22eb16d-b384-4dc1-b649-d185990be62f.0" configVersion="80e299d58c51bcf42420bbb1a36628eed7c88c91"/>
 		<Metadata name="Language.Русский" id="ab579006-f582-4f94-8065-312326331e05" configVersion="3afebd240b7f80dc333f52ced77652135d43467d"/>
 		<Metadata name="Role.S3_ОсновнаяРоль" id="15b5d659-1a77-4c3f-a005-b022aa485cc1" configVersion="c35e8d413ef7c46491f8b98823c43b581ed8403a"/>
 	</ConfigVersions>
