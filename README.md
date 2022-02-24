@@ -9,7 +9,7 @@ This is a prototype and not production-read solution.
 - **List Bucket** - a single request to return up to "Max Keys Per Request" keys (no recursion for large lists).
 - **Create New Folder** - add an empty key to stage a new folder*.
 - **Upload New File** - add a new file into current folder*
-- **Delete File** - delete seelcted object.
+- **Delete File** - delete selected object.
 
 *(there are no folders in S3 - this is just a simplification)*
 
