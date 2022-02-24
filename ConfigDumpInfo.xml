@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.13">
+	<ConfigVersions>
+		<Metadata name="Catalog.AwsS3Bucket" id="7a2a8acd-7a8a-4282-92f1-385b530dfc81" configVersion="95212c2527ead926843878e317aee6e32f8f1953">
+			<Metadata name="Catalog.AwsS3Bucket.Attribute.Region" id="06208216-5f20-4b31-9e6d-f0828940e7f7"/>
+			<Metadata name="Catalog.AwsS3Bucket.Attribute.AccessKeyId" id="5fb220f8-6dfa-4f53-ad9d-453103461bbd"/>
+			<Metadata name="Catalog.AwsS3Bucket.Attribute.InitialFolder" id="7d3bb951-884a-46ed-9067-f87dbdc7b7d2"/>
+			<Metadata name="Catalog.AwsS3Bucket.Attribute.BucketName" id="b9babddc-680a-46a5-a389-819daea0a2da"/>
+			<Metadata name="Catalog.AwsS3Bucket.Attribute.SecretAccessKey" id="babe1ae1-8b94-44a5-8ad3-b33a9aff8ce7"/>
+			<Metadata name="Catalog.AwsS3Bucket.Attribute.PublicEndpoint" id="c8e113df-4210-4742-97b4-2c400655932a"/>
+			<Metadata name="Catalog.AwsS3Bucket.Attribute.MaxKeysPerRequest" id="cb8bd3dd-b319-412e-b2eb-d6c0cf3589e1"/>
+		</Metadata>
+		<Metadata name="Catalog.AwsS3Bucket.ObjectModule" id="7a2a8acd-7a8a-4282-92f1-385b530dfc81.0" configVersion="368a0f819f855d18cbba7d05f0efa99ed96d675f"/>
+		<Metadata name="Configuration.AwsS3Browser" id="c34ffcdf-b7f6-488d-9dc1-728967f9bd10" configVersion="e891eca5aff40ff41d5beeeabd873d578bbff20a"/>
+		<Metadata name="DataProcessor.AwsS3Browser" id="8f3467a1-e7a7-4f78-920d-58358b34d4a0" configVersion="7ccfb07ff3aad7e212cd342d45bcdd5b70386164">
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.Region" id="0fb2750a-e409-40c6-bc98-82b8786dc48e"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.RequestText" id="1085edf4-7628-4008-b7e0-f856b67dacc0"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.RequestLogs" id="1c6921dc-cee2-4656-bc87-a5ee4da5c06c"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.BucketObjects.Attribute.StorageClass" id="289faa04-9d20-4b3b-9e21-fceacd9b40cf"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.BucketObjects.Attribute.ObjectShortName" id="3d63d12c-6c91-436d-93a0-2d94f5d16b6c"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.BucketObjects.Attribute.Key" id="4efc7590-f22c-4d20-98a7-17850d0bb326"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.ResponseText" id="7d3d7553-e39f-44c5-90f6-199fac506d6c"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.BucketObjects" id="811cd66d-1ac4-4e1a-a731-e879963c7df2"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.RequestLogs.Attribute.Request" id="8a63be59-3e28-4625-bb10-e4c4eac72ae9"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.BucketObjects.Attribute.Size" id="8a825f66-f8b5-4f65-baaf-30c61838f6d0"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.m_NextContinuationToken" id="8b907fb2-c582-4a27-bd07-b14d65af10d7"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.MaxKeysPerRequest" id="8dc99bd0-dd6e-4819-a654-3d7b546eea25"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.PublicEndpoint" id="8e55cc8d-3c6e-4db3-b53e-e4292cfac595"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.RequestLogs.Attribute.Date" id="8f300dbd-1c9f-4ad6-bb13-e8d731f48011"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.m_IsTruncated" id="a521767a-aef4-4c44-b474-3f4b8c9bba51"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.BucketObjects.Attribute.LastModified" id="ac3f0f53-33dd-4451-9c62-2c13d7212c16"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.BucketObjects.Attribute.isFolder" id="b07ea5b4-18c7-4479-981d-b401f5b42ab1"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.RequestLogs.Attribute.Response" id="b5402ec4-03ae-4005-bf9b-f2b3bbc384fb"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.BucketObjects.Attribute.ETag" id="b850e0df-613a-4661-bc3a-339a17e45eac"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.m_Prefix" id="bc6f5c7d-0c01-44f0-ab38-a6929e88b112"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.SecretKey" id="c4ef227b-0aa4-4590-bce7-a8a0f382489c"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.AccessKey" id="cf88e5c5-0c09-45c1-a331-206dd382c959"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.Service" id="e7a35d02-b9c1-446b-b641-1562ba81de44"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.BucketName" id="e869cdd3-48c7-44c5-8d22-ab8ad28825d8"/>
+			<Metadata name="DataProcessor.AwsS3Browser.TabularSection.RequestLogs.Attribute.StatusCode" id="ed1c616e-2e73-469c-ba08-71ab91e14c83"/>
+			<Metadata name="DataProcessor.AwsS3Browser.Attribute.Bucket" id="f2e98bab-7609-465b-be88-f5c297e37c5f"/>
+		</Metadata>
+		<Metadata name="DataProcessor.AwsS3Browser.Form.Form" id="d22eb16d-b384-4dc1-b649-d185990be62f" configVersion="419608e84a6482f6fc54aaeebdeb36426ad62136"/>
+		<Metadata name="DataProcessor.AwsS3Browser.Form.Form.Form" id="d22eb16d-b384-4dc1-b649-d185990be62f.0" configVersion="bd0f730b94d45d928b617b073e779debf88a8eb4"/>
+		<Metadata name="Language.Русский" id="ab579006-f582-4f94-8065-312326331e05" configVersion="3afebd240b7f80dc333f52ced77652135d43467d"/>
+		<Metadata name="Role.S3_ОсновнаяРоль" id="15b5d659-1a77-4c3f-a005-b022aa485cc1" configVersion="c35e8d413ef7c46491f8b98823c43b581ed8403a"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

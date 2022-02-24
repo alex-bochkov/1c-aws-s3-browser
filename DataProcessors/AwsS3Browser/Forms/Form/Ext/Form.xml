@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Bucket" id="67">
+			<DataPath>Object.Bucket</DataPath>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="BucketContextMenu" id="68"/>
+			<ExtendedTooltip name="BucketExtendedTooltip" id="69"/>
+			<Events>
+				<Event name="OnChange">BucketOnChange</Event>
+			</Events>
+		</InputField>
+		<Pages name="GroupPages" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group pages</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group pages</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="GroupPagesExtendedTooltip" id="10"/>
+			<ChildItems>
+				<Page name="GroupBucketObjects" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Bucket Objects</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Bucket Content</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group bucket objects</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="GroupBucketObjectsExtendedTooltip" id="12"/>
+					<ChildItems>
+						<UsualGroup name="GroupStatus" id="54">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group status</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group status</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupStatusExtendedTooltip" id="55"/>
+							<ChildItems>
+								<InputField name="m_Prefix" id="56">
+									<DataPath>Object.m_Prefix</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Current Folder</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="m_PrefixContextMenu" id="57"/>
+									<ExtendedTooltip name="m_PrefixExtendedTooltip" id="58"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="BucketObjects" id="13">
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Object.BucketObjects</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="BucketObjectsContextMenu" id="14"/>
+							<AutoCommandBar name="BucketObjectsCommandBar" id="15">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ListObjects" id="1">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Command.RefreshList</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.Refresh</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ListObjectsExtendedTooltip" id="2"/>
+									</Button>
+									<Button name="BucketObjectsReturnOneLevelUp" id="52">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ReturnOneLevelUp</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.LevelUp</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="BucketObjectsReturnOneLevelUpExtendedTooltip" id="53"/>
+									</Button>
+									<Button name="BucketObjectsSortListAsc" id="59">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.BucketObjects.StandardCommand.SortListAsc</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="BucketObjectsSortListAscExtendedTooltip" id="60"/>
+									</Button>
+									<Button name="BucketObjectsSortListDesc" id="61">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.BucketObjects.StandardCommand.SortListDesc</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="BucketObjectsSortListDescExtendedTooltip" id="62"/>
+									</Button>
+									<Button name="BucketObjectsCreateNewFolder" id="63">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.CreateNewFolder</CommandName>
+										<ExtendedTooltip name="BucketObjectsCreateNewFolderExtendedTooltip" id="64"/>
+									</Button>
+									<Button name="BucketObjectsUploadNewFile" id="65">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.UploadNewFile</CommandName>
+										<ExtendedTooltip name="BucketObjectsUploadNewFileExtendedTooltip" id="66"/>
+									</Button>
+									<Button name="BucketObjectsDeleteObject" id="102">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.DeleteObject</CommandName>
+										<ExtendedTooltip name="BucketObjectsDeleteObjectExtendedTooltip" id="103"/>
+									</Button>
+									<Button name="BucketObjectsContextMenuOpenInBrowser" id="70">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.OpenInBrowser</CommandName>
+										<ExtendedTooltip name="BucketObjectsContextMenuOpenInBrowserExtendedTooltip" id="71"/>
+									</Button>
+									<Button name="BucketObjectsOutputList" id="100">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.BucketObjects.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="BucketObjectsOutputListExtendedTooltip" id="101"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="BucketObjectsExtendedTooltip" id="16"/>
+							<SearchStringAddition name="BucketObjectsSearchString" id="17">
+								<AdditionSource>
+									<Item>BucketObjects</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="BucketObjectsSearchStringContextMenu" id="18"/>
+								<ExtendedTooltip name="BucketObjectsSearchStringExtendedTooltip" id="19"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="BucketObjectsViewStatus" id="20">
+								<AdditionSource>
+									<Item>BucketObjects</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="BucketObjectsViewStatusContextMenu" id="21"/>
+								<ExtendedTooltip name="BucketObjectsViewStatusExtendedTooltip" id="22"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="BucketObjectsSearchControl" id="23">
+								<AdditionSource>
+									<Item>BucketObjects</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="BucketObjectsSearchControlContextMenu" id="24"/>
+								<ExtendedTooltip name="BucketObjectsSearchControlExtendedTooltip" id="25"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">BucketObjectsSelection</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="BucketObjectsLineNumber" id="26">
+									<DataPath>Object.BucketObjects.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
+									<ContextMenu name="BucketObjectsLineNumberContextMenu" id="27"/>
+									<ExtendedTooltip name="BucketObjectsLineNumberExtendedTooltip" id="28"/>
+								</LabelField>
+								<PictureField name="BucketObjectsisFolder" id="29">
+									<DataPath>Object.BucketObjects.isFolder</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<ValuesPicture>
+										<xr:Ref>StdPicture.DocumentJournal</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="BucketObjectsisFolderContextMenu" id="30"/>
+									<ExtendedTooltip name="BucketObjectsisFolderExtendedTooltip" id="31"/>
+								</PictureField>
+								<InputField name="BucketObjectsObjectShortName" id="32">
+									<DataPath>Object.BucketObjects.ObjectShortName</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="BucketObjectsObjectShortNameContextMenu" id="33"/>
+									<ExtendedTooltip name="BucketObjectsObjectShortNameExtendedTooltip" id="34"/>
+								</InputField>
+								<InputField name="BucketObjectsLastModified" id="35">
+									<DataPath>Object.BucketObjects.LastModified</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="BucketObjectsLastModifiedContextMenu" id="36"/>
+									<ExtendedTooltip name="BucketObjectsLastModifiedExtendedTooltip" id="37"/>
+								</InputField>
+								<InputField name="BucketObjectsETag" id="38">
+									<DataPath>Object.BucketObjects.ETag</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="BucketObjectsETagContextMenu" id="39"/>
+									<ExtendedTooltip name="BucketObjectsETagExtendedTooltip" id="40"/>
+								</InputField>
+								<InputField name="BucketObjectsSize" id="41">
+									<DataPath>Object.BucketObjects.Size</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="BucketObjectsSizeContextMenu" id="42"/>
+									<ExtendedTooltip name="BucketObjectsSizeExtendedTooltip" id="43"/>
+								</InputField>
+								<InputField name="BucketObjectsStorageClass" id="44">
+									<DataPath>Object.BucketObjects.StorageClass</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="BucketObjectsStorageClassContextMenu" id="45"/>
+									<ExtendedTooltip name="BucketObjectsStorageClassExtendedTooltip" id="46"/>
+								</InputField>
+								<InputField name="BucketObjectsKey" id="47">
+									<DataPath>Object.BucketObjects.Key</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="BucketObjectsKeyContextMenu" id="48"/>
+									<ExtendedTooltip name="BucketObjectsKeyExtendedTooltip" id="49"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="GroupRequestLog" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Request Logs</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Request Logs</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group request log</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="GroupRequestLogExtendedTooltip" id="51"/>
+					<ChildItems>
+						<Table name="RequestLogs" id="72">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Object.RequestLogs</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="RequestLogsContextMenu" id="73"/>
+							<AutoCommandBar name="RequestLogsCommandBar" id="74"/>
+							<ExtendedTooltip name="RequestLogsExtendedTooltip" id="75"/>
+							<SearchStringAddition name="RequestLogsSearchString" id="76">
+								<AdditionSource>
+									<Item>RequestLogs</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="RequestLogsSearchStringContextMenu" id="77"/>
+								<ExtendedTooltip name="RequestLogsSearchStringExtendedTooltip" id="78"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="RequestLogsViewStatus" id="79">
+								<AdditionSource>
+									<Item>RequestLogs</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="RequestLogsViewStatusContextMenu" id="80"/>
+								<ExtendedTooltip name="RequestLogsViewStatusExtendedTooltip" id="81"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="RequestLogsSearchControl" id="82">
+								<AdditionSource>
+									<Item>RequestLogs</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="RequestLogsSearchControlContextMenu" id="83"/>
+								<ExtendedTooltip name="RequestLogsSearchControlExtendedTooltip" id="84"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="RequestLogsLineNumber" id="85">
+									<DataPath>Object.RequestLogs.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="RequestLogsLineNumberContextMenu" id="86"/>
+									<ExtendedTooltip name="RequestLogsLineNumberExtendedTooltip" id="87"/>
+								</LabelField>
+								<InputField name="RequestLogsDate" id="88">
+									<DataPath>Object.RequestLogs.Date</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="RequestLogsDateContextMenu" id="89"/>
+									<ExtendedTooltip name="RequestLogsDateExtendedTooltip" id="90"/>
+								</InputField>
+								<InputField name="RequestLogsStatusCode" id="91">
+									<DataPath>Object.RequestLogs.StatusCode</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="RequestLogsStatusCodeContextMenu" id="92"/>
+									<ExtendedTooltip name="RequestLogsStatusCodeExtendedTooltip" id="93"/>
+								</InputField>
+								<InputField name="RequestLogsRequest" id="94">
+									<DataPath>Object.RequestLogs.Request</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="RequestLogsRequestContextMenu" id="95"/>
+									<ExtendedTooltip name="RequestLogsRequestExtendedTooltip" id="96"/>
+								</InputField>
+								<InputField name="RequestLogsResponse" id="97">
+									<DataPath>Object.RequestLogs.Response</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="RequestLogsResponseContextMenu" id="98"/>
+									<ExtendedTooltip name="RequestLogsResponseExtendedTooltip" id="99"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.AwsS3Browser</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="RefreshList" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh list</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ListObjects</Action>
+		</Command>
+		<Command name="ReturnOneLevelUp" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go Back Up</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Go Back Up</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Return one level up</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ReturnOneLevelUp</Action>
+		</Command>
+		<Command name="CreateNewFolder" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>New Folder</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>New Folder</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create new folder</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateFolder</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>CreateNewFolder</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="UploadNewFile" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload New File</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Upload New File</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload new file</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>UploadNewFile</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="OpenInBrowser" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open in browser</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Open In Browser</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open in browser</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GotoExternalURL</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>OpenInBrowser</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="DeleteObject" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Delete</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Delete object</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>DeleteObject</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>
