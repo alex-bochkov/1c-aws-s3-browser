@@ -3,7 +3,7 @@
 
 A configuration extension that demonstrates working with AWS S3 using the REST API - no external components, SDK or CLI required. 
 Requests are signed using [AWS Signature Version 4](https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html). <br/>
-This is a prototype and not production-read solution.
+This is a prototype and not production-ready solution.
 
 ### Supported operations:
 - **List Bucket** - a single request to return up to "Max Keys Per Request" keys (no recursion for large lists).
